@@ -1,0 +1,195 @@
+{
+  "diseases": [
+    {
+      "name": "Tomato Late Blight",
+      "description": "A serious disease caused by Phytophthora infestans that affects tomato and potato plants.",
+      "symptoms": ["Dark brown spots on leaves", "White mold on leaf undersides", "Rapid wilting"],
+      "organicTreatment": "Apply copper-based fungicide spray. Remove and destroy infected plant parts. Use neem oil solution as preventive.",
+      "chemicalTreatment": "Apply Mancozeb or Chlorothalonil fungicide. Use systemic fungicides like Metalaxyl for severe cases.",
+      "prevention": ["Ensure good air circulation", "Avoid overhead watering", "Rotate crops annually", "Use resistant varieties"]
+    },
+    {
+      "name": "Tomato Early Blight",
+      "description": "Caused by Alternaria solani, this disease creates characteristic target-like spots on leaves.",
+      "symptoms": ["Concentric ring spots on leaves", "Lower leaves affected first", "Yellowing around spots"],
+      "organicTreatment": "Apply baking soda spray (1 tbsp per gallon). Use compost tea. Apply mulch to prevent soil splash.",
+      "chemicalTreatment": "Apply Chlorothalonil or Mancozeb fungicide every 7-10 days. Use Azoxystrobin for resistant strains.",
+      "prevention": ["Mulch around plants", "Water at base of plant", "Remove infected debris", "Practice crop rotation"]
+    },
+    {
+      "name": "Powdery Mildew",
+      "description": "A fungal disease that appears as white powdery spots on leaves and stems.",
+      "symptoms": ["White powdery coating on leaves", "Curling leaves", "Stunted growth"],
+      "organicTreatment": "Spray milk solution (40% milk, 60% water). Apply neem oil. Use potassium bicarbonate spray.",
+      "chemicalTreatment": "Apply sulfur-based fungicide. Use Myclobutanil or Trifloxystrobin for severe infections.",
+      "prevention": ["Improve air circulation", "Avoid overcrowding", "Water in morning", "Choose resistant varieties"]
+    },
+    {
+      "name": "Leaf Rust",
+      "description": "Caused by Puccinia fungi, creating orange-brown pustules on leaf surfaces.",
+      "symptoms": ["Orange-brown pustules on leaves", "Yellowing of leaves", "Premature leaf drop"],
+      "organicTreatment": "Remove infected leaves immediately. Apply sulfur dust. Use garlic spray as preventive.",
+      "chemicalTreatment": "Apply Propiconazole or Tebuconazole fungicide. Use Triadimefon for severe outbreaks.",
+      "prevention": ["Remove crop debris", "Use resistant varieties", "Ensure proper spacing", "Avoid excessive nitrogen"]
+    },
+    {
+      "name": "Bacterial Spot",
+      "description": "Caused by Xanthomonas bacteria, creating water-soaked spots on leaves and fruit.",
+      "symptoms": ["Small dark spots on leaves", "Water-soaked lesions", "Scabby spots on fruit"],
+      "organicTreatment": "Apply copper hydroxide spray. Use Bacillus subtilis biological control. Remove infected plants.",
+      "chemicalTreatment": "Apply copper-based bactericide with Mancozeb. Use streptomycin for early-stage control.",
+      "prevention": ["Use disease-free seeds", "Avoid working with wet plants", "Sanitize tools", "Rotate crops for 2-3 years"]
+    },
+    {
+      "name": "Tomato Mosaic Virus",
+      "description": "A viral disease causing mottled light and dark green patterns on leaves.",
+      "symptoms": ["Mottled yellow-green leaves", "Distorted leaf growth", "Reduced fruit size"],
+      "organicTreatment": "No cure exists. Remove and destroy infected plants. Disinfect hands and tools with milk solution.",
+      "chemicalTreatment": "No chemical cure available. Focus on prevention. Use virus-free certified seeds.",
+      "prevention": ["Use resistant varieties", "Disinfect tools regularly", "Wash hands before handling", "Control aphid vectors"]
+    },
+    {
+      "name": "Tomato Yellow Leaf Curl",
+      "description": "A viral disease transmitted by whiteflies causing severe leaf curling and yellowing.",
+      "symptoms": ["Upward leaf curling", "Yellowing leaf margins", "Stunted plant growth", "Flower drop"],
+      "organicTreatment": "Use yellow sticky traps for whiteflies. Apply neem oil spray. Introduce natural predators like ladybugs.",
+      "chemicalTreatment": "Apply Imidacloprid for whitefly control. Use Thiamethoxam as soil drench. Spray Pyriproxyfen.",
+      "prevention": ["Use reflective mulch", "Install insect-proof netting", "Remove infected plants", "Control whitefly population"]
+    },
+    {
+      "name": "Septoria Leaf Spot",
+      "description": "A fungal disease caused by Septoria lycopersici, common in warm humid conditions.",
+      "symptoms": ["Small circular spots with dark borders", "Gray centers on spots", "Lower leaves affected first", "Leaf yellowing"],
+      "organicTreatment": "Remove infected leaves. Apply copper fungicide. Use compost tea spray weekly.",
+      "chemicalTreatment": "Apply Chlorothalonil every 7-10 days. Use Mancozeb as preventive spray.",
+      "prevention": ["Avoid overhead irrigation", "Space plants for airflow", "Mulch to reduce splash", "Rotate crops yearly"]
+    },
+    {
+      "name": "Downy Mildew",
+      "description": "Caused by oomycetes, this disease thrives in cool, moist conditions and attacks many crops.",
+      "symptoms": ["Yellow patches on upper leaf surface", "Gray-purple fuzz on leaf underside", "Leaf browning and death"],
+      "organicTreatment": "Apply copper-based fungicide. Improve drainage and ventilation. Use baking soda spray.",
+      "chemicalTreatment": "Apply Metalaxyl or Mefenoxam. Use Phosphorous acid-based fungicides.",
+      "prevention": ["Ensure good air circulation", "Water early in the day", "Remove plant debris", "Use resistant cultivars"]
+    },
+    {
+      "name": "Anthracnose",
+      "description": "A group of fungal diseases causing dark sunken lesions on fruits, leaves, and stems.",
+      "symptoms": ["Dark sunken spots on fruit", "Salmon-colored spore masses", "Leaf wilting", "Stem cankers"],
+      "organicTreatment": "Remove infected plant parts. Apply neem oil or copper spray. Use compost to improve soil health.",
+      "chemicalTreatment": "Apply Azoxystrobin or Chlorothalonil. Use Mancozeb as a preventive measure.",
+      "prevention": ["Avoid overhead watering", "Harvest ripe fruit promptly", "Clean garden debris", "Use disease-free seeds"]
+    },
+    {
+      "name": "Black Rot",
+      "description": "A bacterial disease caused by Xanthomonas campestris, commonly affecting cruciferous vegetables.",
+      "symptoms": ["V-shaped yellow lesions on leaf edges", "Blackened leaf veins", "Wilting and stunting"],
+      "organicTreatment": "Remove and destroy infected plants. Apply copper hydroxide spray. Practice hot water seed treatment.",
+      "chemicalTreatment": "Apply copper-based bactericides. No effective chemical cure once established.",
+      "prevention": ["Use certified disease-free seeds", "Rotate crops for 3 years", "Control cruciferous weeds", "Avoid overhead irrigation"]
+    },
+    {
+      "name": "Cercospora Leaf Spot",
+      "description": "A fungal disease causing circular spots with gray centers on many vegetable and ornamental crops.",
+      "symptoms": ["Circular gray-brown spots", "Dark spot borders", "Leaf yellowing", "Premature defoliation"],
+      "organicTreatment": "Remove infected leaves. Apply neem oil. Use copper fungicide spray.",
+      "chemicalTreatment": "Apply Thiophanate-methyl or Azoxystrobin. Use Chlorothalonil as preventive spray.",
+      "prevention": ["Rotate crops", "Avoid wetting foliage", "Space plants properly", "Remove crop residue"]
+    },
+    {
+      "name": "Fusarium Wilt",
+      "description": "A soil-borne fungal disease caused by Fusarium oxysporum that blocks water-conducting vessels.",
+      "symptoms": ["Yellowing on one side of plant", "Wilting despite adequate water", "Brown discoloration in stems", "Stunted growth"],
+      "organicTreatment": "Solarize soil in summer. Add Trichoderma-based bio-fungicide. Use compost to promote beneficial microbes.",
+      "chemicalTreatment": "Apply Thiophanate-methyl as soil drench. Use Carbendazim for early infection. Fumigate severely infected soil.",
+      "prevention": ["Use resistant varieties", "Maintain soil pH 6.5-7.0", "Practice long crop rotation", "Avoid root injury during transplanting"]
+    },
+    {
+      "name": "Verticillium Wilt",
+      "description": "A soil-borne fungal disease caused by Verticillium dahliae affecting many crops.",
+      "symptoms": ["Lower leaf yellowing", "V-shaped wilting pattern", "Brown streaks in stem tissue", "One-sided wilting"],
+      "organicTreatment": "Remove and destroy infected plants. Solarize soil. Add compost and beneficial fungi.",
+      "chemicalTreatment": "No effective chemical treatment. Focus on soil fumigation and prevention.",
+      "prevention": ["Use resistant rootstocks", "Solarize soil before planting", "Avoid planting in infected soil", "Practice 4-year crop rotation"]
+    },
+    {
+      "name": "Botrytis Gray Mold",
+      "description": "Caused by Botrytis cinerea, this disease produces fuzzy gray mold on flowers, fruits and stems.",
+      "symptoms": ["Gray fuzzy mold on plant parts", "Brown water-soaked spots", "Flower blight", "Fruit rot"],
+      "organicTreatment": "Remove infected parts immediately. Improve air circulation. Apply Bacillus-based biocontrol.",
+      "chemicalTreatment": "Apply Iprodione or Fenhexamid fungicide. Use Boscalid for resistant strains.",
+      "prevention": ["Reduce humidity around plants", "Space plants adequately", "Remove dead flowers and debris", "Water at soil level"]
+    },
+    {
+      "name": "Citrus Canker",
+      "description": "A bacterial disease caused by Xanthomonas citri affecting all citrus varieties.",
+      "symptoms": ["Raised corky lesions on leaves", "Halo around lesions", "Fruit blemishes", "Premature fruit drop"],
+      "organicTreatment": "Prune infected branches. Apply copper-based sprays. Use windbreaks to reduce bacterial spread.",
+      "chemicalTreatment": "Apply copper hydroxide or copper oxychloride. Use streptomycin during bloom period.",
+      "prevention": ["Use disease-free nursery stock", "Disinfect pruning tools", "Install windbreaks", "Control leaf miner insects"]
+    },
+    {
+      "name": "Apple Scab",
+      "description": "A fungal disease caused by Venturia inaequalis, one of the most common apple diseases worldwide.",
+      "symptoms": ["Olive-green velvety spots on leaves", "Dark scabby lesions on fruit", "Leaf distortion", "Premature leaf drop"],
+      "organicTreatment": "Apply sulfur or lime-sulfur spray. Use neem oil. Rake and destroy fallen leaves.",
+      "chemicalTreatment": "Apply Captan or Myclobutanil fungicide. Use Dodine during early infection.",
+      "prevention": ["Choose resistant apple varieties", "Prune for good air circulation", "Remove fallen leaves in autumn", "Apply dormant spray in spring"]
+    },
+    {
+      "name": "Rice Blast",
+      "description": "A devastating fungal disease caused by Magnaporthe oryzae affecting rice crops worldwide.",
+      "symptoms": ["Diamond-shaped lesions on leaves", "Gray centers with brown borders", "Neck rot at panicle base", "White grain heads"],
+      "organicTreatment": "Use silicon-rich amendments. Apply Trichoderma-based bio-fungicide. Adjust nitrogen fertilization.",
+      "chemicalTreatment": "Apply Tricyclazole or Isoprothiolane. Use Carbendazim as seed treatment.",
+      "prevention": ["Use resistant varieties", "Avoid excess nitrogen", "Maintain proper water management", "Remove infected stubble"]
+    },
+    {
+      "name": "Grape Black Rot",
+      "description": "A fungal disease caused by Guignardia bidwellii that can destroy entire grape harvests.",
+      "symptoms": ["Brown circular leaf spots", "Black shriveled mummified berries", "Reddish-brown lesions on shoots"],
+      "organicTreatment": "Remove mummified berries. Apply copper spray before bloom. Use sulfur-based fungicides.",
+      "chemicalTreatment": "Apply Myclobutanil or Mancozeb from early shoot growth. Use Captan during bloom.",
+      "prevention": ["Remove all mummified fruit", "Prune for airflow", "Apply fungicides pre-bloom", "Maintain clean vineyard floor"]
+    },
+    {
+      "name": "Corn Common Rust",
+      "description": "A fungal disease caused by Puccinia sorghi producing reddish-brown pustules on corn leaves.",
+      "symptoms": ["Reddish-brown elongated pustules", "Pustules on both leaf surfaces", "Severe leaf yellowing", "Reduced ear fill"],
+      "organicTreatment": "Plant early to avoid peak spore periods. Remove infected crop residue. Use resistant hybrids.",
+      "chemicalTreatment": "Apply Azoxystrobin or Propiconazole at first sign. Use Pyraclostrobin for severe infections.",
+      "prevention": ["Use resistant hybrids", "Plant early in season", "Scout fields regularly", "Maintain balanced fertility"]
+    },
+    {
+      "name": "Healthy",
+      "description": "Your plant appears healthy! No signs of disease detected.",
+      "symptoms": [],
+      "organicTreatment": "No treatment needed. Continue regular care with proper watering and fertilization.",
+      "chemicalTreatment": "No chemical treatment required. Maintain preventive care schedule.",
+      "prevention": ["Regular watering schedule", "Proper nutrition", "Good air circulation", "Regular inspection"]
+    }
+  ],
+  "classLabels": [
+    "Tomato Late Blight",
+    "Tomato Early Blight",
+    "Powdery Mildew",
+    "Leaf Rust",
+    "Bacterial Spot",
+    "Tomato Mosaic Virus",
+    "Tomato Yellow Leaf Curl",
+    "Septoria Leaf Spot",
+    "Downy Mildew",
+    "Anthracnose",
+    "Black Rot",
+    "Cercospora Leaf Spot",
+    "Fusarium Wilt",
+    "Verticillium Wilt",
+    "Botrytis Gray Mold",
+    "Citrus Canker",
+    "Apple Scab",
+    "Rice Blast",
+    "Grape Black Rot",
+    "Corn Common Rust",
+    "Healthy"
+  ]
+}

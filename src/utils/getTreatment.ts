@@ -54,6 +54,10 @@ function findLocalTreatment(name: string): Treatment | null {
 export async function getTreatment(disease: string): Promise<Treatment | null> {
   const target = normalizeName(disease)
 
+  if (!supabase) {
+    return findLocalTreatment(target)
+  }
+
   // Try exact match first
   const exact = await supabase
     .from("treatments")

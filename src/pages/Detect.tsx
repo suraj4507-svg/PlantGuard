@@ -36,15 +36,19 @@ export default function Detect() {
 
     const tensor = preprocessImage(imageRef.current)
 
-    const index = await predictDisease(model, tensor)
+    const index = await predictDisease(undefined, imageRef.current)
 
     const disease = getDiseaseName(index)
 
-    const { data } = await supabase
-      .from("treatments")
-      .select("*")
-      .eq("disease", disease)
-      .single()
+    let data: { organic?: string; chemical?: string; prevention?: string } | null = null
+    if (supabase) {
+      const res = await supabase
+        .from("treatments")
+        .select("*")
+        .eq("disease", disease)
+        .single()
+      data = res.data as { organic?: string; chemical?: string; prevention?: string } | null
+    }
 
     setResult({
       disease,

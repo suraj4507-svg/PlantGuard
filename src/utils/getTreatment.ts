@@ -12,7 +12,17 @@ function normalizeName(name: string) {
   return name.trim()
 }
 
-function mapSupabaseRow(row: any): Treatment {
+type DbRow = {
+  description?: string | null
+  desc?: string | null
+  organicTreatment?: string | null
+  organic?: string | null
+  chemicalTreatment?: string | null
+  chemical?: string | null
+  prevention?: string[] | string | null
+}
+
+function mapSupabaseRow(row: DbRow): Treatment {
   const prevention =
     Array.isArray(row?.prevention)
       ? row.prevention

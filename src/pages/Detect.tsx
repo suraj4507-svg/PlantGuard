@@ -10,12 +10,12 @@ import { supabase } from "../lib/supabase"
 export default function Detect() {
 
   const [image, setImage] = useState<string | null>(null)
-  const [result, setResult] = useState<any>(null)
+  const [result, setResult] = useState<{ disease: string; treatment: { organic?: string; chemical?: string; prevention?: string } | null } | null>(null)
   const [loading, setLoading] = useState(false)
 
   const imageRef = useRef<HTMLImageElement>(null)
 
-  async function handleUpload(e: any) {
+  async function handleUpload(e: React.ChangeEvent<HTMLInputElement>) {
 
     const file = e.target.files[0]
 

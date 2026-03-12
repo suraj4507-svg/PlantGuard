@@ -15,7 +15,7 @@ async function getModel() {
   return cachedModel
 }
 
-export async function predictDisease(image: HTMLImageElement): Promise<PredictionResult> {
+export async function predictDisease(model: tf.LayersModel, image: HTMLImageElement): Promise<PredictionResult> {
   const model = await getModel()
 
   const tensor = tf.browser

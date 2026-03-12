@@ -15,8 +15,8 @@ async function getModel() {
   return cachedModel
 }
 
-export async function predictDisease(model: tf.LayersModel, image: HTMLImageElement): Promise<PredictionResult> {
-  const model = await getModel()
+export async function predictDisease(image: HTMLImageElement): Promise<PredictionResult> {
+  const graphModel = await getModel()
 
   const tensor = tf.browser
     .fromPixels(image)
@@ -25,7 +25,7 @@ export async function predictDisease(model: tf.LayersModel, image: HTMLImageElem
     .toFloat()
     .div(255)
 
-  const out = await model.executeAsync(tensor)
+  const out = await graphModel.executeAsync(tensor)
   const prediction = Array.isArray(out) ? (out[0] as tf.Tensor) : (out as tf.Tensor)
   const data = Array.from(await prediction.data())
   const max = Math.max(...data)

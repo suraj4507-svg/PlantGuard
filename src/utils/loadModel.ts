@@ -1,9 +1,10 @@
 import * as tf from "@tensorflow/tfjs"
 
-export async function loadModel(){
+let cachedModel: tf.GraphModel | null = null
 
-const model = await tf.loadGraphModel("/model/model.json")
-
-return model
-
+export async function loadModel(): Promise<tf.GraphModel> {
+  if (!cachedModel) {
+    cachedModel = await tf.loadGraphModel("/model/model.json")
+  }
+  return cachedModel
 }

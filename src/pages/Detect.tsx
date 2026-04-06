@@ -32,30 +32,30 @@ export default function Detect() {
 
     setLoading(true)
 
-    const model = await loadModel()
+    try {
+      const prediction = await predictDisease(imageRef.current)
+      const disease = prediction.diseaseName
 
-    const tensor = preprocessImage(imageRef.current)
+      let data: { organic?: string; chemical?: string; prevention?: string } | null = null
+      if (supabase) {
+        const res = await supabase
+          .from("treatments")
+          .select("*")
+          .eq("disease", disease)
+          .single()
+        data = res.data as { organic?: string; chemical?: string; prevention?: string } | null
+      }
 
-    const index = await predictDisease(undefined, imageRef.current)
-
-    const disease = getDiseaseName(index)
-
-    let data: { organic?: string; chemical?: string; prevention?: string } | null = null
-    if (supabase) {
-      const res = await supabase
-        .from("treatments")
-        .select("*")
-        .eq("disease", disease)
-        .single()
-      data = res.data as { organic?: string; chemical?: string; prevention?: string } | null
+      setResult({
+        disease,
+        treatment: data
+      })
+    } catch (error) {
+      console.error("Analysis failed:", error)
+      alert("Failed to analyze plant. Please try again.")
+    } finally {
+      setLoading(false)
     }
-
-    setResult({
-      disease,
-      treatment: data
-    })
-
-    setLoading(false)
   }
 
   return (

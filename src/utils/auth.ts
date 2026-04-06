@@ -66,8 +66,8 @@ export function onAuthStateChange(callback: (hasSession: boolean) => void) {
 export function parseAuthError(err: { message?: string } | null) {
   const raw = (err?.message || "").toLowerCase()
   if (!raw) return { message: "Unexpected authentication error" }
-  if (raw.includes("email rate limit exceeded")) {
-    return { message: "Too many attempts. Please wait 60 seconds and try again.", cooldown: 60 }
+  if (raw.includes("email rate limit exceeded") || raw.includes("too many requests")) {
+    return { message: "Security rate limit reached. Please wait a moment before trying again." }
   }
   if (raw.includes("invalid login credentials")) {
     return { message: "Invalid email or password. Check and try again." }

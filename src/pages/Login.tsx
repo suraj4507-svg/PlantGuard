@@ -9,33 +9,16 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
-  const [cooldown, setCooldown] = useState<number>(0);
   const [info, setInfo] = useState<string | null>(null);
-  const [attemptCount, setAttemptCount] = useState<number>(0);
   const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (cooldown > 0) return;
     setError(null);
     signIn(email.trim(), password).then(async ({ data, error }) => {
       if (error) {
         const mapped = parseAuthError(error);
         setError(mapped.message);
-        if (mapped.cooldown && attemptCount > 0) {
-          setCooldown(mapped.cooldown);
-          const timer = setInterval(() => {
-            setCooldown((c) => {
-              if (c <= 1) {
-                clearInterval(timer);
-                return 0;
-              }
-              return c - 1;
-            });
-            return;
-          }, 1000);
-        }
-        setAttemptCount((c) => c + 1);
         return;
       }
       if (data.session) {
@@ -97,10 +80,9 @@ export default function Login() {
             </div>
             <button
               type="submit"
-              disabled={cooldown > 0}
-              className={`w-full gradient-nature text-primary-foreground py-2.5 rounded-xl font-semibold transition-opacity ${cooldown > 0 ? "opacity-60 cursor-not-allowed" : "hover:opacity-90"}`}
+              className="w-full gradient-nature text-primary-foreground py-2.5 rounded-xl font-semibold transition-opacity hover:opacity-90"
             >
-              {cooldown > 0 ? `Please wait ${cooldown}s` : "Sign In"}
+              Sign In
             </button>
           </form>
           {error && <p className="text-sm text-destructive mt-3">{error}</p>}
@@ -115,7 +97,7 @@ export default function Login() {
                 });
               }}
               className="text-primary hover:underline disabled:opacity-60"
-              disabled={!email || cooldown > 0}
+              disabled={!email}
             >
               Resend confirmation
             </button>
@@ -129,7 +111,7 @@ export default function Login() {
                 });
               }}
               className="text-primary hover:underline disabled:opacity-60"
-              disabled={!email || cooldown > 0}
+              disabled={!email}
             >
               Forgot password
             </button>

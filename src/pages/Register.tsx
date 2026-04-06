@@ -10,14 +10,11 @@ export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
-  const [cooldown, setCooldown] = useState<number>(0);
   const [success, setSuccess] = useState<string | null>(null);
-  const [attemptCount, setAttemptCount] = useState<number>(0);
   const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (cooldown > 0) return;
     setError(null);
     setSuccess(null);
     const emailTrimmed = email.trim();
@@ -34,20 +31,6 @@ export default function Register() {
       if (error) {
         const mapped = parseAuthError(error);
         setError(mapped.message);
-        if (mapped.cooldown && attemptCount > 0) {
-          setCooldown(mapped.cooldown);
-          const timer = setInterval(() => {
-            setCooldown((c) => {
-              if (c <= 1) {
-                clearInterval(timer);
-                return 0;
-              }
-              return c - 1;
-            });
-            return;
-          }, 1000);
-        }
-        setAttemptCount((c) => c + 1);
         return;
       }
       if (data.user) {
@@ -121,10 +104,9 @@ export default function Register() {
             </div>
             <button
               type="submit"
-              disabled={cooldown > 0}
-              className={`w-full gradient-nature text-primary-foreground py-2.5 rounded-xl font-semibold transition-opacity ${cooldown > 0 ? "opacity-60 cursor-not-allowed" : "hover:opacity-90"}`}
+              className="w-full gradient-nature text-primary-foreground py-2.5 rounded-xl font-semibold transition-opacity hover:opacity-90"
             >
-              {cooldown > 0 ? `Please wait ${cooldown}s` : "Create Account"}
+              Create Account
             </button>
           </form>
           {error && <p className="text-sm text-destructive mt-3">{error}</p>}
